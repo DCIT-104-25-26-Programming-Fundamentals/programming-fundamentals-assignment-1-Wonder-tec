@@ -61,12 +61,9 @@
 #   (do NOT let the program crash).
 # - Division results should be rounded to 2 decimal places.
 # - Handle invalid menu choices gracefully.
-#
 
-#
-# =============================================================================
-# YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
-# =============================================================================
+
+
 
 def add(a, b):
     return a + b
