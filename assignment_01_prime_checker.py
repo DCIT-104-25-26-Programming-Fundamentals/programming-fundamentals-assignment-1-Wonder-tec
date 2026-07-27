@@ -29,7 +29,7 @@
 # - You MUST implement the logic inside a function (see scaffold below).
 # - Numbers less than 2 are NOT prime — handle this inside the function.
 # - The main block must call the function and print the result.
-#
+
 
 # =============================================================================
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
