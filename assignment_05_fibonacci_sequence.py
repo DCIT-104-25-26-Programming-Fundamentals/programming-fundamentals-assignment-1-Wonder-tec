@@ -47,5 +47,79 @@
 #
 # =============================================================================
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
+
+# =============================================================================
+# PROGRAMMING FUNDAMENTALS — Assignment 5
+# Topic: Loops, Sequences, and Functions
+# =============================================================================
+#
+# TASK: Fibonacci Sequence Generator
+#
+# The Fibonacci sequence is a series of numbers where each number is the sum
+# of the two numbers before it:
+#
+#   0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
+#
+# Write a Python program with TWO parts, each implemented as a function.
+#
+# -----------------------------------------------------------------------------
+# PART A — Print the First N Terms
+# -----------------------------------------------------------------------------
+# - Ask the user how many terms (N) to display.
+# - Print the first N numbers of the Fibonacci sequence on one line.
+#
+# -----------------------------------------------------------------------------
+# PART B — Check if a Number Belongs to the Sequence
+# -----------------------------------------------------------------------------
+# - Ask the user to enter a number.
+# - Determine whether that number is a Fibonacci number.
+# - Print an appropriate message.
+#
+# -----------------------------------------------------------------------------
+# REQUIREMENTS
+# -----------------------------------------------------------------------------
+# - Use a loop (not recursion) to generate the sequence in both parts.
+# - N must be a positive integer. If it is not, print an error message.
+# - Each part must be implemented in its own function.
+#
 # =============================================================================
 
+def print_fibonacci_sequence(n):
+    if n <= 0:
+        print("Error: Number of terms must be a positive integer")
+        return
+
+    a, b = 0, 1
+    sequence = []
+    for _ in range(n):
+        sequence.append(a)
+        a, b = b, a + b
+
+    print("Fibonacci sequence:", " ".join(map(str, sequence)))
+
+
+def is_fibonacci_number(number):
+    if number < 0:
+        return False
+
+    a, b = 0, 1
+    while a < number:
+        a, b = b, a + b
+
+    return a == number
+
+
+def main():
+    n = int(input("How many terms? "))
+    print_fibonacci_sequence(n)
+
+    print()
+    number = int(input("Enter a number to check: "))
+    if is_fibonacci_number(number):
+        print(f"{number} is a Fibonacci number.")
+    else:
+        print(f"{number} is NOT a Fibonacci number.")
+
+
+if __name__ == "__main__":
+    main()

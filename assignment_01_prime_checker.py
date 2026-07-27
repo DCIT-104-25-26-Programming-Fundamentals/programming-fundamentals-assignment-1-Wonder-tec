@@ -31,8 +31,7 @@
 # - The main block must call the function and print the result.
 
 
-# =============================================================================
-# YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
+
 
  
 def is_prime(number):

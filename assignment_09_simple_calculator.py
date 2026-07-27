@@ -68,3 +68,91 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+def add(a, b):
+    return a + b
+
+
+def subtract(a, b):
+    return a - b
+
+
+def multiply(a, b):
+    return a * b
+
+
+def divide(a, b):
+    if b == 0:
+        return None
+    return round(a / b, 2)
+
+
+def modulus(a, b):
+    if b == 0:
+        return None
+    return a % b
+
+
+def exponent(a, b):
+    return a ** b
+
+
+def display_menu():
+    print("============================")
+    print("     SIMPLE CALCULATOR")
+    print("============================")
+    print("1. Addition")
+    print("2. Subtraction")
+    print("3. Multiplication")
+    print("4. Division")
+    print("5. Modulus")
+    print("6. Exponentiation")
+    print("7. Quit")
+
+
+def get_two_numbers():
+    first = float(input("Enter first number : "))
+    second = float(input("Enter second number: "))
+    return first, second
+
+
+def format_number(n):
+    return int(n) if isinstance(n, float) and n.is_integer() else n
+
+
+def main():
+    operations = {
+        "1": ("+", add),
+        "2": ("-", subtract),
+        "3": ("*", multiply),
+        "4": ("/", divide),
+        "5": ("%", modulus),
+        "6": ("**", exponent),
+    }
+
+    while True:
+        print()
+        display_menu()
+        choice = input("Select an operation (1-7): ")
+        print()
+
+        if choice == "7":
+            print("Goodbye!")
+            break
+
+        if choice not in operations:
+            print("Error: Invalid choice. Please select a number from 1 to 7.")
+            continue
+
+        symbol, operation = operations[choice]
+        a, b = get_two_numbers()
+
+        if choice in ("4", "5") and b == 0:
+            print("Error: Cannot divide by zero.")
+            continue
+
+        result = operation(a, b)
+        print(f"Result: {format_number(a)} {symbol} {format_number(b)} = {result}")
+
+
+if __name__ == "__main__":
+    main()

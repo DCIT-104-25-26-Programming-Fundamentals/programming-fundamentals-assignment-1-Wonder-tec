@@ -38,11 +38,8 @@
 # - Validate that the score is within the range 0–100 inside get_grade().
 #   If it is not, return None and let main() print the error message.
 # - Use if / elif / else to determine the grade.
-#
 
-#
-# =============================================================================
-# YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
+
 
 def get_grade(score):
     score = int(score)
