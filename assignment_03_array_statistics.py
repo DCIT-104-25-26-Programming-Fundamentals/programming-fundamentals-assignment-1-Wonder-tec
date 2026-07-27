@@ -33,10 +33,7 @@
 #   Implement the logic yourself using loops inside each function.
 # - N must be a positive integer. If the user enters 0 or a negative
 #   number, print an error message and stop.
-#
 
-# =============================================================================
-# YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 
 def calculate_sum(numbers):
     total = 0
