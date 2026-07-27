@@ -55,9 +55,7 @@
 # - Tip: Complete Part A first, then Parts B and C.
 #
 
-#
-# =============================================================================
-# YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
+
 
 def read_matrix(name="matrix"):
     rows = int(input(f"Enter number of rows for {name}: "))
